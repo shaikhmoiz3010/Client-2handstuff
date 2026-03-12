@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Grid, List } from 'lucide-react';
 import ProductCard from './ProductCard';
+import { formatPrice } from '../../utils/formatters';
 
 const ProductList = ({ 
   products, 
@@ -52,7 +53,7 @@ const ProductList = ({
                       <p className="text-gray-600 mb-4 line-clamp-2">{product.description}</p>
                     </div>
                     <div className="md:text-right mt-4 md:mt-0 md:ml-6">
-                      <p className="text-2xl font-bold text-amber-700 mb-1">${product.price}</p>
+                      <p className="text-2xl font-bold text-amber-700 mb-1">{formatPrice(product.price)}</p>
                       {product.isNegotiable && (
                         <span className="text-sm bg-amber-100 text-amber-800 px-3 py-1 rounded-lg font-medium">
                           Negotiable

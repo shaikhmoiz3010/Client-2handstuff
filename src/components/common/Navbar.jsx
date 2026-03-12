@@ -305,20 +305,7 @@ const Navbar = () => {
                 </div>
               )}
 
-              {/* Mobile Footer */}
-              <div className="mt-6 pt-4 border-t border-amber-100">
-                <div className="flex justify-between text-xs text-gray-500">
-                  <Link to="/about" onClick={() => setIsMenuOpen(false)} className="hover:text-amber-600">
-                    About
-                  </Link>
-                  <Link to="/help" onClick={() => setIsMenuOpen(false)} className="hover:text-amber-600">
-                    Help Center
-                  </Link>
-                  <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="hover:text-amber-600">
-                    Contact
-                  </Link>
-                </div>
-              </div>
+
             </div>
           </motion.div>
         )}

@@ -99,15 +99,7 @@ const DashboardPage = () => {
       trendUp: true,
       description: 'Ready to sell'
     },
-    {
-      title: 'Profile Views',
-      value: stats.totalViews?.[0]?.totalViews || 0,
-      icon: <Eye className="w-6 h-6" />,
-      color: 'from-amber-500 to-orange-600',
-      trend: '+32%',
-      trendUp: true,
-      description: 'Total views'
-    }
+
   ];
 
 
@@ -362,40 +354,6 @@ const DashboardPage = () => {
           <div className="space-y-8">
 
 
-            {/* Quick Actions */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="backdrop-blur-sm bg-white/80 rounded-2xl shadow-xl p-6 border border-white/60"
-            >
-              <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                <Zap className="w-5 h-5 mr-2 text-amber-600" />
-                Quick Actions
-              </h3>
-              <div className="space-y-3">
-                <Link
-                  to="/create-product"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-amber-50 to-yellow-50 hover:from-amber-100 hover:to-yellow-100 rounded-xl transition-all group"
-                >
-                  <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-lg flex items-center justify-center">
-                    <Plus className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="font-medium text-gray-800">Create New Listing</span>
-                </Link>
-                
-                <Link
-                  to="/profile/edit"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-gray-50 to-white hover:bg-gray-100 rounded-xl transition-all"
-                >
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
-                    <Settings className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="font-medium text-gray-800">Edit Profile</span>
-                </Link>
-
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>
